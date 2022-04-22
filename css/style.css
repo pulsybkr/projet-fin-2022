@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@100;200;300;400;600;700;800 & family= Marck+Script & display=swap' );
+
+
+
+
+/* valeur deja appeler */
+:root
+{
+    --police-defaut: 'Inter', sans-serif;
+    --police-second: 'Marck Script', cursive;
+    --shadow-one: 1px 0px 35px 15px rgba(7,63,6,0.83); 
+}
+
+/* ********************** body ****************** */
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body
+{
+    background-color: black;
+}
+
+/* ************************************************************ */
+/* ********************* arriere plan ************************* */
+/* ************************************************************ */
+header
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+/* ************ video arriere plan ************ */
+
+header .video video
+{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.show
+{
+   visibility: hidden;
+}
+
+.show2
+{
+    visibility: visible;
+}
+header .video::after
+{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+   position: absolute;
+   z-index: 10;
+   background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+/* *************** milieu ************* */
+
+header .milieu
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+   position: absolute;
+   z-index: 100;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+/* ********* menu de navigation pour mobile ****** */
+#menu 
+{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+    z-index: 1000;
+}
+
+.show-header
+{
+    visibility: hidden;
+    
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 500;
+    width: 90%;
+    background-color: #ffffffd5;
+    height: 85vh;
+   backdrop-filter: blur(10px);
+   transform: translateY(-100px);
+   transition: all 0.5s;
+   border-radius: 50px;
+}
+
+.show-header .menu-nav 
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.showw 
+{
+   display: block;
+   transform: translateY(0%);
+    visibility: visible;
+   
+}
+
+.show-header ul li 
+{
+    list-style: none;
+    margin-top: 45px;
+    position: relative;
+}
+
+.show-header ul li a, .retour, .retour2
+{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--police-defaut);
+    transition: all 0.2s ease-in-out;
+}
+
+.show-header ul li a:hover
+{
+    color: #1d5f1b;
+}
+
+/*
+.show-header ul li::after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #084A07;
+    bottom: -20%;
+    left: 0;
+    transform: translate(-10%);
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+.show-header ul li:hover::after
+{
+    transform: translate(0%);
+
+    visibility: visible;
+} */
+/* ************** menu deroulant numero uno *********** */
+
+.show-header .deroul-one
+{
+   visibility: hidden;
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+   backdrop-filter: blur(50px);
+   z-index: 2000;
+   padding: 100px;
+   left: -100px;
+   top: -150px !important;
+   border-radius: 50px;
+   transform: translateX(50px);
+    transition: transform 0.3S;
+
+}
+
+.show-deroule
+{
+    visibility: visible !important;
+    transform: translateX(0) !important;
+    transition: transform 0.3S;
+
+}
+
+/* ************** menu deroulant numero deux *********** */
+.show-header .deroul-two
+{
+   visibility: hidden;
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+   backdrop-filter: blur(50px);
+   z-index: 2000;
+   padding: 100px;
+   left: -100px;
+   top: -150px !important;
+   border-radius: 50px;
+   transform: translateX(50px);
+    transition: transform 0.3S;
+
+}
+
+.show-deroule2
+{
+    visibility: visible !important;
+    transform: translateX(0) !important;
+    transition: transform 0.3S;
+
+}
+
+/* *************************************************** */
+
+.retour, .retour2
+{
+    cursor: pointer;
+}
+#menu img 
+{
+    width: 75px;
+    z-index: 1000;
+}
+
+/* *************** menu de navigation et logo ************* */
+.navbar
+{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.507);
+    position: fixed ;
+    transition: 0.3s;
+    z-index: 1000 !important;
+}
+
+.navbar.scroll 
+{
+    background: rgba(0,0,0,0.3);
+    height: 80px;
+    border-bottom: none;
+    backdrop-filter: blur(15px);
+    position: fixed !important;
+}
+
+.navbar .logo img
+{
+    width: 150px;
+    margin-left: 50px;
+}
+
+.navbar ul
+{
+    margin-right: 50px;
+    position: relative;
+    transition: all 0.5s;
+}
+.navbar ul li
+{
+    display: inline;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.navbar ul li a 
+{
+    color: white;
+    text-decoration: none;
+    padding: 10% 20px ;
+    font-family: var(--police-defaut);
+    position: relative;
+    font-size: .8rem;
+    transition: all 0.5s;
+}
+
+.navbar ul li a:hover
+{
+    letter-spacing: 0.1em;
+}
+
+.connect-header
+{
+    background-color: #1d5f1b;
+    padding: 15px 20px !important;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.connect-header:hover
+{
+    opacity: 0.7;
+}
+
+/* menu deroulant */
+.deroul 
+{
+    display: none;
+    transition: all 0.5s ease-in;
+}
+
+.navbar ul li:hover .deroul
+{
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: #337e30ac;
+    padding: 10px;
+    width: 150px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.deroul li a 
+{
+    width: 80% !important;
+  padding: 10px 10px !important;
+  display: block;
+  transition: all 0.3s ease-out;
+} 
+
+.deroul li a:hover
+{
+    background-color: #1d5f1b;
+    color: black;
+} 
+
+/* partie du milieu header */
+
+.milieu-header
+{
+    width: 70%;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    font-family: var(--police-defaut);
+    color: white;
+    position: relative;
+    top: 25%;
+}
+
+.text-header h2
+{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.text-header h3
+{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.text-header p
+{
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.5em;
+    margin-bottom: 25px;
+    max-width: 650px;
+}
+
+/* bouton sur le header */
+.btn-header a 
+{
+    padding: 15px 30px;
+    background-color: white;
+    font-size: 0.8rem;
+    color: black;
+    text-decoration: none;
+    transition: letter-spacing 0.5s;
+}
+
+.btn-header a:hover
+{
+    letter-spacing: 0.2em;
+}
+
+/* ************************************************************ */
+/* ********************* corps de la page ********************* */
+/* ************************************************************ */
+
+#main 
+{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 1250px;
+    position: relative;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.main-one 
+{
+    position: relative;
+}
+
+.img-main-one
+{
+    float: right;
+    height: 700px;
+    z-index: 1;
+    cursor: pointer;
+   
+}
+
+
+
+/*
+.img-main-one::after
+{
+    content: '';
+    width: 400px;
+    height: 700px;
+    position: absolute;
+    background-color: black;
+    top: 1px;
+    right: 1px;
+    z-index: 5;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+
+.img-main-one:hover::after{
+    opacity: 0;
+}*/
+
+.img-main-one img
+{
+    width: 400px;
+    height: 100%;
+    box-shadow: var(--shadow-one);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}
+
+.img-main-one img:hover
+{
+    opacity: 1;
+}
+
+.text-main-one 
+    {
+        position: absolute;
+        color: white;
+       width: 100%;
+       top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       z-index: 100;
+    }
+
+    .text-main-one h2
+    {
+        font-family: var(--police-second);
+        font-size: 2rem;
+    }
+
+    .text-main-one p
+    {
+        font-family: var(--police-defaut);
+        font-size: 1rem;
+        width: 60%;
+        text-align: center;
+        line-height: 1.4em;
+        margin-top: 15px;
+    }
+
+
+/* ........grid des images */
+.parent-grid-one {
+    position: relative;
+    top: 40%;
+    margin-right: 30px;
+    left: 0;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    }
+    .parent-grid-one img
+    {
+        transition: transform 0.3s ease-out;
+    }
+   
+    .parent-grid-one img:hover
+    {
+        transform: scale(1.2);
+        z-index: 3000;
+    }
+
+    .grid-img1 {
+     grid-area: 1 / 1 / 2 / 2;
+     width: 150px;
+     height: 140px; }
+    .grid-img1 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+    
+    .grid-img2 {
+     grid-area: 1 / 2 / 2 / 3;
+     width: 150px;
+     height: 140px; }
+    .grid-img2 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+    .grid-img3 {
+     grid-area: 1 / 3 / 2 / 4;
+     width: 150px;
+     height: 140px; }
+    .grid-img3 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+    .grid-img4 {
+     grid-area: 1 / 4 / 2 / 5;
+     width: 150px;
+     height: 140px; }
+    .grid-img4 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+    .grid-img5 {
+     grid-area: 2 / 1 / 3 / 2;
+     width: 150px;
+     height: 140px; }
+    .grid-img5 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+    .grid-img6 {
+     grid-area: 2 / 2 / 3 / 3;
+     width: 150px;
+     height: 140px; }
+    .grid-img6 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+    .grid-img7 {
+     grid-area: 2 / 3 / 3 / 4;
+     width: 150px;
+     height: 140px; }
+    .grid-img7 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+    .grid-img8 {
+     grid-area: 2 / 4 / 3 / 5;
+     width: 150px;
+     height: 140px; }
+    .grid-img8 img
+    {
+    width: 100%;
+    height: 100%;
+    }
+
+/* ************** main deux a partir de congo *************** sape*/
+    
+
+.main-two
+{
+    position: relative;
+    display: block;
+    width: 1075px;
+}
+    .two-main
+    {
+        display: flex;
+        justify-content: flex-end;
+        height: 400px;
+    }
+
+    .img-two
+    {
+        width: 690px;
+        height: auto;
+        position: absolute;
+        z-index: 1000;
+        top: -50px;
+        left: 50px;
+        
+    }
+
+
+
+    .img-two img
+    {
+        width: 100%;
+        height: 100%;
+        box-shadow: var(--shadow-one);
+        opacity: 0.7;
+        margin-top: 25px;
+        transition: opacity 0.3s ease ;
+        
+    }
+
+    .img-two img:hover
+    {
+
+        opacity: 1;
+    }
+
+    .img-sape-two img
+    {
+        transition: transform 0.3s ease-out;
+    }
+   
+    .img-sape-two img:hover
+    {
+        transform: scale(1.2);
+        z-index: 1000;
+    }
+/*
+    .img-two::after
+    {
+        content: '';
+        width: 690px;
+        height: 100%;
+        position: absolute;
+        background-color: black;
+        top: 1px;
+        left: 1px;
+        z-index: 5;
+        opacity: 0.3;
+        transition: opacity 0.5s;
+        cursor: pointer;
+    }
+
+    .img-two:hover::after{
+        opacity: 0;
+    } */
+
+    .text-two
+    {
+        top: 100px;
+        position: relative;
+        color: white;
+        width: 500px;
+        z-index: 2000;
+        height: 250px;
+    }
+
+    .text-two p
+    {
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        font-family: var(--police-defaut);
+        text-align: center;
+    }
+
+    /* ........ grid image deux */
+
+    .img-sape-two {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+       margin: 0 40px;
+        }
+        
+        .img-sape1 { grid-area: 1 / 1 / 2 / 2; }
+        .img-sape2 { grid-area: 1 / 2 / 2 / 3; }
+        .img-sape3 { grid-area: 1 / 3 / 2 / 4; }
+        .img-sape4 { grid-area: 1 / 4 / 2 / 5; }
+        .img-sape5 { grid-area: 1 / 5 / 2 / 6; }
+        .img-sape6 { grid-area: 1 / 6 / 2 / 7; }
+
+/* ************** main trois a partir de decouvrir *************** sape*/
+    
+#main-three
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-three
+{
+    width: 1075px;
+    display: flex;
+    background: linear-gradient(180deg, rgba(3,47,2,1) 22%, rgba(3,47,2,0) 100%);
+    padding: 100px 0;
+}
+
+    .img-main-three img
+    {
+        width: 600px;
+        height: auto;
+        padding: 0 30px;
+    }
+     .text-three
+    {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right: 30px;
+    }
+
+    .text-three h2
+    {
+        font-size: 2rem;
+        font-family: var(--police-second);
+    }
+
+    .text-three h3
+    {
+        font-size: 1.6rem;
+        font-family: var(--police-second);
+    }
+
+    .text-three p
+    {
+        font-size: 1rem;
+        font-family: var(--police-defaut);
+        text-align: center;
+    }
+
+
+    .text-three .btn-decouvrir a
+    {
+        width: 100%;
+        height: 100%;
+        background: none;
+        color: white;
+        padding: 20px 50px;
+        border: 1px solid white;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-family: var(--police-defaut);
+        transition: background-color 0.5s ease, letter-spacing 0.5s ease;
+        margin-top: 15px;
+        
+    }
+
+    .text-three .btn-decouvrir a:hover
+    {
+        background-color: #1d5f1b;
+        color: white;
+        letter-spacing: 0.2em;
+    }
+
+/* ************* * icone maps ************ */
+.info-main
+{
+    width: 1075px;
+    display: flex;
+   justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+.contenair-main
+{
+    width: 200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenair-main img
+{
+    height: 65px;
+    margin-bottom: 10px;
+}
+ 
+/* ****************** derniere partie avant le header ********* */
+
+.finish-main
+{
+    width: 100%;
+    height: 450px;
+    color: white;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 22%, rgba(3,47,2,0) 100%),
+    url("../img/nuit-congo2.jpg") no-repeat center center / cover
+    ;
+    display: flex;
+    justify-content: center;
+}
+
+.text-finish-main
+{
+    margin-top: 100px;
+   width: 70%; 
+}
+
+.text-finish-main h2
+{
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--police-second);
+}
+
+.text-finish-main p
+{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--police-defaut);
+    line-height: 1.4em;
+}
+
+
+/* *********........**** footer ******.......***********/
+/*******************************************************/
+/*******************************************************/
+
+
+footer
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #084A07;
+}
+
+.logo-footer img
+{
+    width: 100px;
+    margin-left: 50px;
+}
+
+.social-footer
+{
+    margin-right: 50px;
+}
+.social-footer img{
+    width: 30px;
+    padding: 0 5px;
+    transition: all 0.5s;
+}
+
+.social-footer img:hover
+{
+    transform: translateY(-15px);
+}
+

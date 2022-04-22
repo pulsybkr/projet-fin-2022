@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@100;200;300;400;600;700;800 & family= Marck+Script & display=swap' );
+
+
+/* valeur deja appeler */
+:root
+{
+    --police-defaut: 'Inter', sans-serif;
+    --police-second: 'Marck Script', cursive;
+    --shadow-one: 1px 0px 35px 15px rgba(7,63,6,0.83); 
+}
+
+/* ********************** body ****************** */
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+/* ***************************** header ************************** */
+body
+{
+    background: url("../img/banncontact.jpg") no-repeat center center / cover fixed ;
+}
+
+header
+{
+   background: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+}
+
+header .milieu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-title  
+{
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.contact-title h2
+{
+    font-size: 4rem;
+    font-family: var(--police-second);
+}
+
+/* ***************************** corps de la page ******************** */
+/* ******************************************************************* */
+main
+{
+    background: rgba(0, 0, 0, 0.5) !important;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact
+{
+    width: 100%;
+    background: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--police-defaut);
+}
+
+/* ************** titre avant le formulaire  ******************/
+
+.haut
+{
+    margin-bottom: 25px;
+}
+.haut h2
+{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.haut p
+{
+    color: white;
+    text-align: center;
+
+    font-size: 1rem;
+}
+
+/* **************  formulaire  ******************/
+
+.formulaire
+{
+   width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+form{
+
+}
+
+.formulaire span
+{
+    color: red;
+}
+
+
+/* *******************nom et prenom */ 
+.name 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.name label
+{
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+    padding: 5px;
+}
+
+.prename 
+{
+    display: flex;
+    justify-content: space-between;
+}
+.prename input
+{
+    width: 240px;
+    height: 25px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* ********** autre */
+
+.autre
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.autre label
+{
+    color: white;
+    font-size: 0.9rem;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+.autre input
+{
+    height: 30px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.autre select 
+{
+    height: 30px;
+}
+
+.choix-radio
+{
+    margin: 5px 0;
+   display: flex; 
+   justify-content: space-evenly;
+   color: white;
+}
+
+.objet-demande
+{
+    font-size: 0.9rem;
+    color: white;
+    margin: 5px;
+}
+
+
+.submit input
+{
+    background-color: #084A07 !important;
+    border: none;
+    color: white;
+    transition: all 0.3s ease-in;
+    height: 40px;
+    position: relative;
+}
+
+.submit input:hover
+{
+    background-color: white !important;
+    border: none;
+    color: black;
+    height: 30px;
+    position: relative;
+}
+
+
+/* ********************************************** media query ******************************************** */
+/* ******************************************************************************************************* */
+
+@media screen and (max-width: 520px){
+
+    .contact-title h2 {
+        font-size: 2.5rem;
+        font-family: var(--police-second);
+    }
+    
+        .formulaire
+    {
+    width: 100%;
+        
+        
+    }
+        .prename 
+    {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+        .prename input
+    {
+        width: 100%;
+        margin-bottom: 10px;
+       
+    }
+
+    .haut h2 {
+       
+        font-size: 1.5rem;
+    }
+
+    .haut p {
+       
+        font-size: 0.9rem;
+    }
+}

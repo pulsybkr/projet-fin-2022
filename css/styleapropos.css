@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@100;200;300;400;600;700;800 & family= Marck+Script & display=swap' );
+
+
+/* valeur deja appeler */
+:root
+{
+    --police-defaut: 'Inter', sans-serif;
+    --police-second: 'Marck Script', cursive;
+    --shadow-one: 1px 0px 35px 15px rgba(7,63,6,0.83); 
+}
+
+/* ********************** body ****************** */
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nous 
+{
+    background-color: #406B06 !important;
+}
+
+/* ***************************** header ************************** */
+
+header
+{
+    background: url('../img/bann-apropos.webp') no-repeat center center/ cover;
+        height: 100vh;
+    }
+
+    header .milieu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100px;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.507);
+        position: fixed;
+        transition: 0.3s;
+    }
+
+/* ***************************** partie du header ************************** */
+
+.leftbar-header
+{
+        position: relative;
+        top: 100px;
+        width: 500px;
+        height: 86.8vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    align-items: center;
+    }
+
+
+    .leftbar-header img
+    {
+        width: 200px;
+    }
+
+    .leftbar-header p
+    {
+        color: white;
+        padding: 25px 35px;
+        font-family: var(--police-defaut);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+
+/* ***************************** main partie du corps de la page ************************** */
+
+main{
+    width: 100%;
+}
+
+.nous-main
+{
+        background:  linear-gradient(82deg, rgba(0,0,0,0.8690826672465861) 81%, rgba(3,47,2,0) 100%), url('../img/back-one.webp') no-repeat center center/ cover ;
+    }
+
+    .title-one-nous, .title-two-nous
+    {
+        width: 100%;
+        height: 100px;
+        background-color: #084A07;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+
+    }
+
+    .title-one-nous h2, .title-two-nous h2
+    {
+        color: white;
+        font-family: var(--police-second);
+        text-align: center;
+    }
+
+    .text-main-nous
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .contenair-nous
+    {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+        grid-gap: 25px;
+    }
+
+    .text-main-nous p
+    {
+        color: white;
+        width: 100%;
+        padding: 15px;
+        text-align: justify;
+        font-size: 1.1rem;
+        line-height: 1.8em;
+
+        
+    }
+
+
+/* ***************************** deuxieme partie du main partie pulsy  ************************** */
+
+.ekip-main
+    {
+        display: flex;
+        flex-direction: column;    
+        align-items: center;
+        background: url('../img/pulsy-one.jpg') no-repeat center center/ cover ;
+    
+        
+    }
+
+    .pulsy-main-nous{
+        
+        padding: 80px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+    }
+    .pulsy-img{
+        width: 100px;
+        margin-bottom: 25px;
+        height: auto;
+        transition: transform 0.3s ease-in;
+        cursor: pointer;
+    }
+
+    .pulsy-img:hover
+    {
+        transform: scale(1.2) ;
+    }
+
+    .pulsy-img img{
+        width: 100%;
+    }
+    .text-pulsy h2{
+        color: white;
+        font-family: var(--police-second);
+    }
+
+    .text-pulsy h3
+    {
+        color: white;
+        font-size: 0.8rem;
+        font-family: var(--police-defaut);
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .text-pulsy p
+    {
+        color: white;
+        text-align: justify;
+        font-size: 1.1rem;
+        line-height: 1.8em;
+        width: 80%;
+        font-family: var(--police-defaut);
+    
+    }
+
+/* ***************************** avant derniere partie ************************** */
+ .contact-nous
+ {
+        width: 100%;
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(180deg, rgba(8,74,7,0.5) 50%, rgba(0,0,0,0) 100%);
+    }
+
+    .contact-main-nous
+    {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .img-kanoe
+    {
+        width: 50%;
+        margin-right: 25px;
+        
+    }
+
+    .img-kanoe img
+    {
+        width: 100%;
+        border-radius: 50px;
+    
+    }
+
+
+        .text-contact-nous
+    {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .text-contact-nous .text-haut h2
+    {
+        color: white;
+        text-align: center;
+        font-family: var(--police-second);
+        margin-bottom: 1rem;
+    }
+
+    .text-contact-nous .text-haut p
+    {
+        color: white;
+        text-align: center;
+        font-family: var(--police-defaut);
+        font-size: 1.1rem;
+    }
+
+
+    .text-contact-nous .btn-contact
+    {
+            color: white;
+            text-decoration: none;
+            font-family: var(--police-defaut);
+            font-size: 0.8rem;
+            padding: 15px 30px;
+            border: 1px solid white;
+            border-radius: 50px;
+            text-align: center;
+            transition: all 0.3s ease-out;
+            position: relative;
+            z-index: 100 !important;
+        }
+
+        .text-contact-nous .btn-contact::before
+        {
+            content: 'contactez-nous';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50px;
+            transform: translate(-20%);
+            opacity: 0;
+            z-index: 1;
+            transition: all 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #084A07;
+            font-size: 1rem;
+        }
+
+        .text-contact-nous .btn-contact:hover::before
+        {
+            transform: translate(0%);
+            opacity: 1;
+            z-index: 1;
+        }
+/*
+        .text-contact-nous .btn-contact:hover
+        {
+            background-color: white;
+            color: #084A07;
+            border: none;
+            font-size: 1rem;
+        }
+*/
+
+
+ /* ************************* media query ********************* */
+ /* ***********************************************************/
+ /* ***********************************************************/
+ /* ***********************************************************/
+
+ @media screen and (max-width: 1100px)
+ {
+    .text-pulsy p
+    {
+        width: 100%;
+    }
+ }
+
+ /* ********************************************************************************************************************************* */
+@media screen and (max-width: 915px)
+{
+
+}
+
+/* ********************************************************************************************************************************* */
+@media screen and (max-width: 745px) 
+{
+    .leftbar-header
+    {
+        width: 100%;
+ 
+    }
+
+    
+    .contenair-nous
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ********************************************************************************************************************************* */
+@media screen and (max-width: 520px)
+{
+    
+
+    .pulsy-main-nous
+    {
+        padding: 20px;
+    }
+
+    .contact-main-nous 
+    {
+        display: block;
+    }
+
+    .img-kanoe {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .text-contact-nous {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .text-contact-nous p
+    {
+        margin-bottom: 15px;
+    }
+}
+
+/* ********************************************************************************************************************************* */
+@media screen and (max-width: 414px)
+{
+
+}
+
+/* ********************************************************************************************************************************* */
