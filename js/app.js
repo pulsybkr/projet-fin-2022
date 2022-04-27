@@ -85,3 +85,74 @@ retourMenu2.addEventListener('click', () => {
    //  console.log('Salut le monde')
     afficheMenu2.classList.remove('show-deroule2');
 }) 
+
+
+// ******************************  js de la page brazza 
+// ************* menu
+
+var bz2 = document.querySelector('.bz2'); // nav 1
+var bz1 = document.querySelector('.bz1'); // nav 2
+var bz3 = document.querySelector('.bz3'); // nav 3
+
+ // *  section correspondant à la nav
+
+ var sct2 = document.querySelector('.bzv2');
+ var sct1 = document.querySelector('.bzv1');
+ var sct3 = document.querySelector('.bzv3');
+
+
+ // fonction de la section 2
+bz2.addEventListener('click', () => {
+    console.log('ça marche');
+    bz1.classList.remove('actuel');
+    bz2.classList.add('actuel');
+    bz3.classList.remove('actuel');
+
+    sct2.classList.add('activer');
+    sct1.classList.remove('activer');
+    sct3.classList.remove('activer');
+
+    sct1.classList.add('no-active');
+    sct3.classList.add('no-active');
+
+    sct2.classList.remove('no-active');
+
+
+
+})
+
+
+ // fonction de la section 1
+bz1.addEventListener('click', () => {
+    console.log('ok');
+    bz2.classList.remove('actuel');
+    bz1.classList.add('actuel');
+    bz3.classList.remove('actuel');
+
+    sct1.classList.add('activer');
+    sct2.classList.remove('activer');
+    sct3.classList.remove('activer');
+
+    sct2.classList.add('no-active');
+    sct3.classList.add('no-active');
+
+    sct1.classList.remove('no-active');
+
+})
+
+
+ // fonction de la section 3
+bz3.addEventListener('click', () => {
+    console.log('bien jouer');
+    bz2.classList.remove('actuel');
+    bz3.classList.add('actuel');
+    bz1.classList.remove('actuel');
+
+    sct3.classList.add('activer');
+    sct2.classList.remove('activer');
+    sct1.classList.remove('activer');
+    sct2.classList.add('no-active');
+    sct1.classList.add('no-active');
+    sct3.classList.remove('no-active');
+
+})

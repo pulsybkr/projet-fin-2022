@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@100;200;300;400;600;700;800 & family= Marck+Script & display=swap' );
+
+
+
+
+/* valeur deja appeler */
+:root
+{
+    --police-defaut: 'Inter', sans-serif;
+    --police-second: 'Marck Script', cursive;
+    --shadow-one: 1px 0px 35px 15px rgba(7,63,6,0.83); 
+}
+
+/* ********************** body ****************** */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: black;
+}
+
+
+/* ************************************************
+*********** */
+/* ************************************************
+*********** */
+
+.milieu-header {
+    width: 100%;
+    top: 50% !important; 
+    margin-left: 0;
+
+}
+
+.milieu-header h2
+{
+    text-align: center;
+    font-family: var(--police-second);
+    font-size: 3rem;
+}
+/* ****************************************************** */
+/* ************** main ********************************* */
+
+#main-brazza
+{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   margin-top: 75px;
+}
+
+.brazza
+{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(180deg, rgba(0,0,0,0.8) 70%, rgba(3,47,2,0) 100%), url('../img/bzv/bk-bzv.jpg') no-repeat center center / cover;
+}
+
+.text-bz 
+{
+    color: white;
+    width: 90%;
+    margin-bottom: 100px;
+}
+
+.text-bz h2
+{
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--police-second);
+    margin-bottom: 25px;
+}
+
+.text-bz p
+{
+    text-align: justify;
+    font-size: 1.1rem;
+    font-family: var(--police-defaut);
+    margin-bottom: 15px;
+    line-height: 1.9em;
+}
+
+.text-bz a
+{
+    color: #6FE5FF;
+    text-decoration: none;
+}
+
+.text-bz h3
+{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--police-defaut);
+    margin: 25px 0;
+}
+
+/* ***************** second partie de la page *********************/
+/******************************************************************/
+
+/* ******* menu ********* */ 
+
+
+.nav-main-brazza
+{
+    width: 100%;
+    height: 70px;
+    background-color: #084A07;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-main-brazza ul{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+}
+.nav-main-brazza ul li 
+{
+    display: inline-block;
+    width: 34%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: var(--police-defaut);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-main-brazza ul li:hover
+{
+    background-color: #5b8518a6;
+} 
+
+.actuel 
+{
+    background-color: #5C8518;
+    transition: all 0.5s ease-in;
+    animation: alternate;
+}
+
+.contenair-bz
+{
+    width: 100%;
+}
+
+.bzv1{
+    width: 100%;
+   height: auto;
+    transition: all 0.5s ease-in;
+    animation: alternate;
+     background: linear-gradient(180deg, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.7) 100%), url('../img/bzv/bk-bzv1.jpg') no-repeat center center / cover !important;
+     padding-bottom: 70px;
+}
+
+.bzv2{
+    width: 100%;
+    height: auto;
+     transition: all 0.5s ease-in;
+    animation: alternate;
+     background: linear-gradient(180deg, rgba(0,0,0, 0.9) 70%, rgba(0,0,0,0.7) 100%), url('../img/bzv/bk-bzv2.jpg') no-repeat center center / cover !important;
+     padding-bottom: 70px;
+}
+
+.bzv3{
+    width: 100%;
+   height: auto;
+    transition: all 0.5s ease-in;
+    animation: alternate;
+    animation-duration: 0.5s;
+     background: linear-gradient(180deg, rgba(0,0,0,0.8) 70%, rgba(3,47,2,0) 100%), url('../img/bzv/bk-bzv.jpg') no-repeat center center / cover !important;
+     padding-bottom: 70px;
+}
+
+
+.activer 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    animation: alternate;
+}
+
+.no-active
+{
+  display: none;
+  transition: all 0.5s ease-in;
+  animation: alternate;
+} 
+
+
+.contenair-bzv
+{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+    position: relative;
+    margin-top: 50px;
+}
+
+
+.bzv1 h2
+{
+    color: white;
+    font-size: 2rem;
+    font-family: var(--police-second);
+    margin-top: 50px;
+}
+.contenair-bzv p
+{
+    color: white;
+    font-family: var(--police-defaut);
+    font-size: 1rem;
+    line-height: 1.9em;
+    text-align: justify;
+}
+
+.bzv2 h2
+{
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--police-second);
+    margin-top: 50px;
+    color: white;
+}
+
+.contenair-bzv span
+{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.contenair-bz2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-bzv2
+{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 50px;
+}
+
+.text-bzv2 .img-bzv
+{
+    display: block;
+    position: relative;
+    width: 70%;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 1px 0px 15px 15px rgba(0, 0, 0, 0.83);
+}
+
+
+.text-bzv2 .img-bzv img
+{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.text-bzv2 .img-bzv img:hover
+{
+   transform: scale(1.1) translate(15px);
+   opacity: 0.8;
+}
+
+.text-bzv2 p
+{
+    width: 40%;
+    color: white;
+    font-family: var(--police-defaut);
+    font-size: 1rem;
+    line-height: 1.9em;
+    text-align: justify;
+    background-color: #084a088e;
+    padding: 50px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+    transition: all 1s ease;
+    box-shadow: 1px 0px 20px 15px rgba(0, 0, 0, 0.6);
+
+}
+
+.text-bzv2 p:hover
+{
+    right: -10%;
+    backdrop-filter: blur(5px);
+}
+
+.text-bzv2 span
+{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* *********** */
+.text-bzv3
+{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 50px;
+}
+
+.text-bzv3 .img-bzv
+{
+    display: block;
+    position: relative;
+    width: 70%;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 1px 0px 15px 15px rgba(0, 0, 0, 0.83);
+
+}
+
+.text-bzv3 .img-bzv img
+{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.text-bzv3 .img-bzv img:hover
+{
+   transform: scale(1.1) translate(15px);
+   opacity: 0.8;
+}
+
+.text-bzv3 p
+{
+    width: 40%;
+    color: white;
+    font-family: var(--police-defaut);
+    font-size: 1rem;
+    line-height: 1.9em;
+    text-align: justify;
+    background-color: #084a088e;
+    padding: 50px;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+    transition: all 1s ease;
+    box-shadow: 1px 0px 20px 15px rgba(0, 0, 0, 0.6);
+
+}
+
+.text-bzv3 p:hover
+{
+    left: -10%;
+    backdrop-filter: blur(5px);
+}
+
+.text-bzv3 span
+{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.tableau
+{
+    width: 70%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+table
+{
+    width: 90%;
+    border-collapse: collapse;
+}
+table td 
+{
+    color: white;
+    width: 50%;
+    height: 40px;
+    border: 1px solid white;
+    text-align: center;
+    border-spacing: 0;
+    padding-left: 0px;
+    padding-top: 0px;
+
+    margin: 0;
+}
+
+
+.bzv3 h2
+{
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--police-second);
+    margin-top: 50px;
+    color: white;
+}
