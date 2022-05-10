@@ -156,3 +156,5 @@ bz3.addEventListener('click', () => {
     sct3.classList.remove('no-active');
 
 })
+
+

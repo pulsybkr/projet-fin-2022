@@ -426,3 +426,179 @@ table td
     margin-top: 50px;
     color: white;
 }
+
+/* ******* bouton contact */
+.btn-contact
+    {
+        margin-top: 75px;
+            color: white;
+            text-decoration: none;
+            font-family: var(--police-defaut);
+            font-size: 0.8rem;
+            padding: 15px 30px;
+            border: 1px solid white;
+            border-radius: 50px;
+            text-align: center;
+            transition: all 0.3s ease-out;
+            position: relative;
+            z-index: 100 !important;
+        }
+
+        .btn-contact::before
+        {
+            content: 'contactez-nous';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50px;
+            transform: translate(-20%);
+            opacity: 0;
+            z-index: 1;
+            transition: all 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #084A07;
+            font-size: 1rem;
+        }
+
+        .btn-contact:hover::before
+        {
+            transform: translate(0%);
+            opacity: 1;
+            z-index: 1;
+        }
+
+/* **********************************media query */
+
+
+
+/* ********************************************************************** */
+/* **************************************************************************** */
+/* La sapologie  */
+/* ****************************************************************************** */
+
+
+/* en tête de la sape */
+#laSape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headSape
+{
+    background: url('../img/bzv/bzvbann.jpg') no-repeat center center / cover;
+    height: 400px;
+    width: 100%;
+}
+
+.textHead 
+{
+    width: 635px;
+    background-color: rgba(1, 18, 1, 0.7);
+    height: 100%;
+    padding: 40px;
+    color: white;
+}
+
+.textHead span
+{
+    font-size: 6rem;
+    font-family: var(--police-defaut);
+    letter-spacing: -0.5em;
+
+}
+
+.textHead p 
+{
+    font-size: 1rem;
+    font-family: var(--police-defaut);
+    text-align: justify;
+    line-height: 1.9em;
+    margin-bottom: 45px;
+}
+
+
+.textHead h3 
+{
+    font-size: 1.1rem;
+    font-family: var(--police-second);
+}
+
+/* titre  */
+
+.titleSape
+{
+    color: white;
+    text-align: center;
+    margin: 50px 0;
+    font-family: var(--police-second);
+}
+
+/* contenair sape */
+
+.contenairSape 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.contenairSape:nth-child(2)
+{
+    flex-direction: row-reverse;
+}
+
+.nth4
+{
+    flex-direction: row-reverse;
+}
+
+.textSape {
+    color: white;
+    padding: 0 50px;
+}
+
+.textSape h3 {
+    color: white;
+   font-family: var(--police-second);
+   text-align: center;
+   font-size: 1.5rem;
+   margin-bottom: 15px;
+}
+
+.textSape p 
+{
+    font-size: 1rem;
+    font-family: var(--police-defaut);
+    text-align: center;
+    line-height: 1.7em;
+}
+
+.textSape span
+{
+    color: #00D1FF;
+    cursor: pointer;
+} 
+
+
+.contenairSape img
+{
+    border-radius: 50px;
+    margin: 0 50px;
+}
+
+.btnSape
+{
+    background-color: #084A07;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+ 

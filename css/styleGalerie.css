@@ -1,0 +1,35 @@
+header .milieu, header {
+    height: 100px !important;
+}
+
+#main
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galerie
+{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    position: relative;
+   }
+
+.image
+{
+    position: relative;
+    height: auto;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+}
