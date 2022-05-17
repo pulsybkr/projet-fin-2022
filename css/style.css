@@ -16,7 +16,6 @@
 *{
     margin: 0;
     padding: 0;
-    
 }
 
 body
@@ -25,7 +24,7 @@ body
 }
 
 /* ************************************************************ */
-/* ********************* arriere plan ************************* */
+/* ********************* header ************************* */
 /* ************************************************************ */
 header
 {
@@ -45,15 +44,8 @@ header .video video
     position: relative;
 }
 
-.show
-{
-   visibility: hidden;
-}
 
-.show2
-{
-    visibility: visible;
-}
+
 header .video::after
 {
     content: '';
@@ -91,6 +83,8 @@ header .milieu
     z-index: 1000;
 }
 
+
+/* ******** menu pour les mobiles **** */
 .show-header
 {
     display: none;
@@ -117,6 +111,8 @@ header .milieu
     flex-direction: column;
 }
 
+
+/* evenement click */
 .showw 
 {
    display: block;
@@ -146,29 +142,7 @@ header .milieu
     color: #1d5f1b;
 }
 
-/*
-.show-header ul li::after
-{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #084A07;
-    bottom: -20%;
-    left: 0;
-    transform: translate(-10%);
-    transition: all 0.5s;
-    visibility: hidden;
-}
-
-.show-header ul li:hover::after
-{
-    transform: translate(0%);
-
-    visibility: visible;
-} */
-/* ************** menu deroulant numero uno *********** */
-
+/* ******* sous menu ******* */
 .show-header .deroul-one
 {
     display: none;
@@ -193,7 +167,7 @@ header .milieu
 
 }
 
-/* ************** menu deroulant numero deux *********** */
+/* ************** sous menu 2 *********** */
 .show-header .deroul-two
 {
   
@@ -231,7 +205,9 @@ header .milieu
     z-index: 1000;
 }
 
+/* *********************************************** */
 /* *************** menu de navigation et logo ************* */
+
 .navbar
 {
     width: 100%;

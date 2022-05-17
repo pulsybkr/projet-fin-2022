@@ -1,10 +1,14 @@
 // *********************************** Js de la galerie
 
-var imageGalerie = document.querySelectorAll('.imgGal');
+var slide = document.querySelectorAll('.image');
+var image = document.querySelector('.mixe');
 
-imageGalerie.forEach(item => {
-    item.addEventListener('click', () => {
-      //handle click
-      console.log('ok')
-    })
-  })
+
+slide.forEach(item => item.addEventListener("click", () => {
+  // image.classList.add("open");
+  console.log(item)
+}))
+
+image.addEventListener("click", () =>{
+  image.classList.remove("open")
+})
