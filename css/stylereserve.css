@@ -32,3 +32,281 @@ header, header .milieu{
 {
     background: url('../img/gal/foret11.jpg') no-repeat center center/ cover;
 }
+
+/* favoris */
+.contenair-favori
+{
+    display: flex;
+}
+
+.bloc
+{
+    width: 25%;
+    height: 600px;
+    position: relative;
+    background: linear-gradient(180deg,rgba(0,0,0,0.57) 20%,rgba(0,0,0,0.9) 100%), url('../img/reserve/reserve1.webp') no-repeat center center/ cover;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.bloc:hover
+{
+    background: linear-gradient(180deg,rgba(21, 30, 16, 0.57) 20%,rgba(9, 30, 3, 0.9) 100%), url('../img/reserve/reserve1.webp') no-repeat center center/ cover;
+}
+.bloc:nth-child(2)
+{
+    background: linear-gradient(180deg,rgba(0,0,0,0.57) 20%,rgba(0,0,0,0.9) 100%), url('../img/reserve/reserve2.webp') no-repeat center center/ cover;
+}
+
+.bloc:nth-child(2):hover
+{
+    background: linear-gradient(180deg,rgba(21, 30, 16, 0.57) 20%,rgba(9, 30, 3, 0.9) 100%), url('../img/reserve/reserve2.webp') no-repeat center center/ cover;    
+}
+
+.bloc:nth-child(3)
+{
+    background: linear-gradient(180deg,rgba(0,0,0,0.57) 20%,rgba(0,0,0,0.9) 100%), url('../img/reserve/reserve3.webp') no-repeat center center/ cover;
+}
+
+.bloc:nth-child(3):hover
+{
+    background: linear-gradient(180deg,rgba(21, 30, 16, 0.57) 20%,rgba(9, 30, 3, 0.9) 100%), url('../img/reserve/reserve3.webp') no-repeat center center/ cover;    
+}
+
+.bloc:nth-child(4)
+{
+    background: linear-gradient(180deg,rgba(0,0,0,0.57) 20%,rgba(0,0,0,0.9) 100%), url('../img/reserve/reserve4.webp') no-repeat center center/ cover;
+}
+
+.bloc:nth-child(4):hover
+{
+    background: linear-gradient(180deg,rgba(21, 30, 16, 0.57) 20%,rgba(9, 30, 3, 0.9) 100%), url('../img/reserve/reserve4.webp') no-repeat center center/ cover;    
+}
+
+/* .bloc img
+{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.btn-fav
+{
+    color: white;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 40%;
+    background-color: red;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 15px 0 0 15px;
+    font-family: var(--police-defaut);
+}
+
+.text-fav
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    margin-bottom: 50px;
+    font-family: var(--police-defaut);
+}
+
+.text-fav p, .text-fav h4{
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-family: var(--police-defaut);
+}
+
+
+.text-fav p
+{
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.text-fav p span
+{
+    color: white;
+    font-size: 1.4rem;
+}
+
+
+.etoile
+{
+    color: #61a44d !important;
+    font-size: 2rem !important;
+    font-family: var(--police-second) !important;
+    font-weight: bold;
+}
+
+.etoile span
+{
+    color: white;
+    font-size: 2rem !important;
+
+}
+
+
+.text-fav button
+{
+    color: white;
+    background: none;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    font-family: var(--police-defaut);
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.text-fav button:hover
+{
+    color: #61a44d;
+}
+
+
+/* ************** title  ************** */
+
+.title-fav h2
+{
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 45px;
+    text-align: center;
+    font-family: var(--police-defaut);
+    font-weight: bolder;
+    font-size: 1.7rem;
+}
+
+
+/* ********** galerie destination ************* */
+
+.destination
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+
+.img-desti
+{
+    max-width: 325px;
+    height: 450px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-desti img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    position: relative;
+}
+.desti
+{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.img-desti::after
+{
+    content: url('../img/plus.png');
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    border-radius: 25px;
+    transition: opacity 0.5s ease;
+}
+
+.img-desti:hover::after
+{
+    opacity: 1;
+}
+
+
+.text-desti
+{
+    color: white;
+    font-family: var(--police-defaut);
+}
+
+.text-desti p, .text-desti h3
+{
+    margin: 10px 20px;
+}
+
+.text-desti h3
+{
+    color: #3b6b2c;
+    font-size: 1.4rem;
+}
+
+
+/* ****************************** */
+.louango
+{
+    width: 100%;
+    height: 80vh;
+    background: url('../img/reserve/bannbas.webp') no-repeat center center / cover; 
+}
+
+.lou
+{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.louango h2
+{
+    text-align: center;
+    font-family: var(--police-second);
+    color: white;
+}
+
+.louango p
+{
+    color: white;
+    width: 500px;
+    text-align: center;
+    font-family: var(--police-defaut);
+    font-size: 1.1rem;
+    margin: 20px 0;
+    
+}
+
+.louango button
+{
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 0px 35px 15px rgba(72, 85, 72, 0.83);
+}
+

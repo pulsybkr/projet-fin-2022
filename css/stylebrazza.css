@@ -602,3 +602,32 @@ table td
     margin-bottom: 100px;
 }
  
+
+/* *************** media query ************** */
+
+@media screen and (max-width: 1220px) {
+    .contenairSape 
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .textSape
+    {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .contenairSape img
+    {
+        width: 90%;
+        margin: 0 10px;
+    }
+
+    .textHead
+    {
+        width: 100%;
+    }
+}
